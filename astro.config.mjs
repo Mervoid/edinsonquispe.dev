@@ -1,5 +1,8 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import ghPages from '@astrojs/gh-pages';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://TU_USUARIO.github.io',
+  base: '/edinsonquispe.dev',
+  adapter: ghPages()
+});
