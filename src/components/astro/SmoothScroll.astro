@@ -3,7 +3,7 @@
 ---
 
 <script>
-  // Smooth scroll mejorado - versión corregida
+  // Smooth scroll 
   document.addEventListener('DOMContentLoaded', () => {
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     
@@ -26,7 +26,7 @@
             inline: 'nearest'
           });
           
-          // Actualizar la URL sin recargar la página (versión corregida)
+          // Actualizar la URL sin recargar la página
           if (window.history.pushState) {
             window.history.pushState({}, '', href);
           }

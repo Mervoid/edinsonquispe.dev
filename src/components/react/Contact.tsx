@@ -39,7 +39,7 @@ const Contact: React.FC<ContactProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
+    // lógica para enviar el formulario
     console.log('Formulario enviado:', formData);
     alert('¡Mensaje enviado! Te contactaré pronto.');
     setFormData({ name: '', email: '', message: '' });
