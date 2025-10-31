@@ -1,14 +1,21 @@
 ---
-// src/layouts/Layout.astro
+// En src/layouts/Layout.astro
 import SmoothScroll from '../components/astro/SmoothScroll.astro';
 import '../styles/global.css';
 
 export interface Props {
-  title: string;
+  title?: string;
   description?: string;
+  canonicalUrl?: string;
 }
 
-const { title, description = "Portafolio Desarrollador Web" } = Astro.props;
+const { 
+  title = "Edinson Quispe - Desarrollador Full Stack", 
+  description = "Portafolio profesional de Edinson Quispe - Desarrollador Full Stack",
+  canonicalUrl 
+} = Astro.props;
+
+const fullCanonicalUrl = canonicalUrl ? `https://edinsonquispe.dev${canonicalUrl}` : 'https://edinsonquispe.dev';
 ---
 
 <!DOCTYPE html>
@@ -16,30 +23,50 @@ const { title, description = "Portafolio Desarrollador Web" } = Astro.props;
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Básicas -->
     <title>{title}</title>
     <meta name="description" content={description}>
+    <link rel="canonical" href={fullCanonicalUrl}>
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://edinsonquispe.dev/">
+    <!-- Open Graph -->
     <meta property="og:title" content={title}>
     <meta property="og:description" content={description}>
-    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:url" content={fullCanonicalUrl}>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Edinson Quispe">
+    <meta property="og:locale" content="es_ES">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content={title}>
-    <meta property="twitter:description" content={description}>
-    <meta property="twitter:image" content="/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
     
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Edinson Quispe",
+        "url": "https://edinsonquispe.dev",
+        "jobTitle": "Desarrollador Full Stack",
+        "description": "${description}",
+        "sameAs": [
+          "https://github.com/Mervoid",
+          "https://linkedin.com/in/edinsonquispe"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root">
       <slot />
     </div>
     
-    <!-- Componente Smooth Scroll -->
     <SmoothScroll />
   </body>
 </html>
