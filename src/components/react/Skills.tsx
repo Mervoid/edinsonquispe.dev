@@ -73,4 +73,5 @@ const Skills: React.FC<SkillsProps> = ({
   );
 };
 
+
 export default Skills;
