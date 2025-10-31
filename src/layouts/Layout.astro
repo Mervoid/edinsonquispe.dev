@@ -1,0 +1,44 @@
+---
+// src/layouts/Layout.astro
+import SmoothScroll from '../components/astro/SmoothScroll.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Portafolio profesional de Edinson Quispe - Desarrollador Full Stack" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://edinsonquispe.dev/">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content="/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
+    <meta property="twitter:image" content="/images/og-image.jpg">
+    
+    <link rel="stylesheet" href="/styles/global.css">
+  </head>
+  <body>
+    <div id="root">
+      <slot />
+    </div>
+    
+    <!-- Componente Smooth Scroll -->
+    <SmoothScroll />
+  </body>
+</html>

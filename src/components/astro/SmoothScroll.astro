@@ -1,0 +1,37 @@
+---
+// src/components/astro/SmoothScroll.astro
+---
+
+<script>
+  // Smooth scroll mejorado para navegación suave
+  document.addEventListener('DOMContentLoaded', function() {
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    
+    anchorLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        const href = this.getAttribute('href');
+        
+        // Ignorar enlaces vacíos o solo '#'
+        if (!href || href === '#') return;
+        
+        const targetElement = document.querySelector(href);
+        
+        if (targetElement) {
+          // Scroll suave al elemento objetivo
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
+          
+          // Actualizar la URL sin recargar la página
+          if (history.pushState) {
+            history.pushState(null, null, href);
+          }
+        }
+      });
+    });
+  });
+</script>
