@@ -1,16 +1,118 @@
----
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edinson Quispe - Desarrollador Full Stack</title>
+    <style>
+      /* Estilos básicos*/
+      :root {
+        --primary: #2563eb;
+        --dark: #1e293b;
+        --light: #f8fafc;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: var(--dark);
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      
+      .hero {
+        background: linear-gradient(135deg, var(--primary), #1e40af);
+        color: white;
+        padding: 6rem 0;
+        text-align: center;
+      }
+      
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: white;
+        color: var(--primary);
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="container">
+        <h1>Edinson Quispe</h1>
+        <p>Desarrollador Full Stack & Apasionado por la Tecnología</p>
+        <p>Transformo ideas en soluciones digitales innovadoras</p>
+        <a href="#proyectos" class="btn">Ver Mis Proyectos</a>
+      </div>
+    </header>
 
----
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" style="padding: 4rem 0;">
+      <div class="container">
+        <h2>Sobre Mí</h2>
+        <p>Soy un desarrollador apasionado por crear soluciones web modernas y eficientes. 
+           Me especializo en JavaScript, React, Node.js y me encanta aprender nuevas tecnologías.</p>
+      </div>
+    </section>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <!-- Proyectos -->
+    <section id="proyectos" style="padding: 4rem 0; background: #f1f5f9;">
+      <div class="container">
+        <h2>Proyectos Destacados</h2>
+        <div style="display: grid; gap: 2rem; margin-top: 2rem;">
+          <div style="background: white; padding: 2rem; border-radius: 10px;">
+            <h3>Proyecto 1</h3>
+            <p>Descripción del proyecto y tecnologías utilizadas.</p>
+          </div>
+          <div style="background: white; padding: 2rem; border-radius: 10px;">
+            <h3>Proyecto 2</h3>
+            <p>Descripción del proyecto y tecnologías utilizadas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" style="padding: 4rem 0;">
+      <div class="container">
+        <h2>Habilidades Técnicas</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem;">
+          <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">
+            JavaScript
+          </span>
+          <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">
+            React
+          </span>
+          <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">
+            Node.js
+          </span>
+          <!-- Agregar mas habilidades -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <footer style="background: var(--dark); color: white; padding: 3rem 0; text-align: center;">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
+        <p>Email: tu-email@ejemplo.com</p>
+        <p>GitHub: <a href="https://github.com/Mervoid" style="color: white;">Mervoid</a></p>
+        <p>LinkedIn: <a href="#" style="color: white;">edinson-quispe</a></p>
+      </div>
+    </footer>
+  </body>
 </html>
