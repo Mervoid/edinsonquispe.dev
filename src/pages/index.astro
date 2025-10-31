@@ -31,9 +31,9 @@ const projectsData = [
 ---
 
 <Layout title="Edinson Quispe - Desarrollador Full Stack">
-  <Header />
-  <About description={aboutDescription} />
-  <Projects projects={projectsData} />
-  <Skills />
-  <Contact />
+  <Header client:load />
+  <About description={aboutDescription} client:load />
+  <Projects projects={projectsData} client:load />
+  <Skills client:load />
+  <Contact client:load />
 </Layout>

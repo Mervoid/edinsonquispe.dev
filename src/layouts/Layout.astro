@@ -1,6 +1,7 @@
 ---
 // src/layouts/Layout.astro
 import SmoothScroll from '../components/astro/SmoothScroll.astro';
+import '../styles/global.css';
 
 export interface Props {
   title: string;
@@ -31,7 +32,7 @@ const { title, description = "Portafolio profesional de Edinson Quispe - Desarro
     <meta property="twitter:description" content={description}>
     <meta property="twitter:image" content="/images/og-image.jpg">
     
-    <link rel="stylesheet" href="../../src/styles/global.css">
+    
   </head>
   <body>
     <div id="root">
