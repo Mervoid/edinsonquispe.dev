@@ -1,0 +1,38 @@
+---
+// src/pages/home.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/react/Header.tsx';
+import About from '../components/react/About.tsx';
+import Projects from '../components/react/Projects.tsx';
+import Skills from '../components/react/Skills.tsx';
+import Contact from '../components/react/Contact.tsx';
+
+const aboutDescription = "Soy un desarrollador apasionado por crear soluciones web modernas y eficientes. Me especializo en JavaScript, React, Node.js y me encanta aprender nuevas tecnologías.";
+
+const projectsData = [
+  {
+    id: 1,
+    title: "Mi Portafolio",
+    description: "Portafolio personal desarrollado con Astro, React y TypeScript.",
+    technologies: ["Astro", "React", "TypeScript", "CSS"],
+    githubUrl: "https://github.com/Mervoid/edinsonquispe.dev",
+    liveUrl: "https://mervoid.github.io/edinsonquispe.dev"
+  },
+  {
+    id: 2,
+    title: "Proyecto API REST",
+    description: "API REST desarrollada con Node.js y Express para gestión de usuarios.",
+    technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+    githubUrl: "#",
+    liveUrl: "#"
+  }
+];
+---
+
+<Layout title="Edinson Quispe - Desarrollador Full Stack">
+  <Header client:load />
+  <About description={aboutDescription} client:load />
+  <Projects projects={projectsData} client:load />
+  <Skills client:load />
+  <Contact client:load />
+</Layout>

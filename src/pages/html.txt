@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPortfolio Pro | Creative Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <custom-navbar></custom-navbar>
+    
+    <main class="container mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <section class="hero-section mb-20">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 animate-fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary-600">Hi, I'm <span class="text-secondary-600">Alex</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-700">UI/UX Designer & Frontend Developer</h2>
+                    <p class="text-lg mb-8 text-gray-600 leading-relaxed">I create beautiful, functional digital experiences with a focus on user-centered design and clean code.</p>
+                    <div class="flex gap-4">
+                        <a href="#work" class="btn-primary">View Work</a>
+                        <a href="#contact" class="btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 animate-fade-in-up">
+                    <div class="relative">
+                        <div class="w-full h-96 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-xl overflow-hidden">
+                            <img src="http://static.photos/technology/640x360/42" alt="Profile" class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
+                                <span class="text-sm font-medium">Available for work</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section mb-20">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="skill-card">
+                    <div class="skill-icon bg-primary-100 text-primary-600">
+                        <i data-feather="code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>HTML, CSS, JavaScript, React, Vue</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon bg-secondary-100 text-secondary-600">
+                        <i data-feather="layers"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Wireframing, Prototyping, User Testing</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon bg-primary-100 text-primary-600">
+                        <i data-feather="smartphone"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first approach</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon bg-secondary-100 text-secondary-600">
+                        <i data-feather="pen-tool"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Illustration, Branding</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="work-section mb-20">
+            <h2 class="section-title">Featured Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card group">
+                    <div class="project-image">
+                        <img src="http://static.photos/technology/640x360/1" alt="Project 1">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-commerce Platform</h3>
+                        <p>UI/UX Design & Frontend Development</p>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card group">
+                    <div class="project-image">
+                        <img src="http://static.photos/technology/640x360/2" alt="Project 2">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Mobile Banking App</h3>
+                        <p>UI Design & Prototyping</p>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card group">
+                    <div class="project-image">
+                        <img src="http://static.photos/technology/640x360/3" alt="Project 3">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>Frontend Development</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#" class="btn-secondary">View All Projects</a>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section mb-20">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Alex delivered beyond our expectations. The attention to detail and user experience focus was exceptional."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="http://static.photos/people/100x100/1" alt="Client 1" class="testimonial-avatar">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Working with Alex was a pleasure. They understood our vision and brought it to life beautifully."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="http://static.photos/people/100x100/2" alt="Client 2" class="testimonial-avatar">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <p>Marketing Director, BrandCo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full">Send Message</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="contact-info-card">
+                        <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="contact-icon">
+                                    <i data-feather="mail"></i>
+                                </div>
+                                <span>hello@example.com</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="contact-icon">
+                                    <i data-feather="phone"></i>
+                                </div>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="contact-icon">
+                                    <i data-feather="map-pin"></i>
+                                </div>
+                                <span>San Francisco, CA</span>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-medium mb-4">Follow Me</h4>
+                            <div class="flex gap-4">
+                                <a href="#" class="social-icon">
+                                    <i data-feather="github"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i data-feather="twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i data-feather="linkedin"></i>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <i data-feather="dribbble"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
+
+
+css:
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background-color: rgb(14, 165, 233);
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-primary:hover {
+    background-color: rgb(2, 132, 199);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background-color: rgb(139, 92, 246);
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-secondary:hover {
+    background-color: rgb(124, 58, 237);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+    color: rgb(17, 24, 39);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    width: 3rem;
+    height: 0.25rem;
+    background-color: rgb(14, 165, 233);
+    border-radius: 0.125rem;
+}
+
+/* Skill Cards */
+.skill-card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.skill-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.skill-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: rgb(17, 24, 39);
+}
+
+.skill-card p {
+    color: rgb(75, 85, 99);
+    font-size: 0.875rem;
+}
+
+/* Project Cards */
+.project-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    height: 250px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 165, 233, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 1.25rem 0;
+}
+
+.project-info h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: rgb(17, 24, 39);
+}
+
+.project-info p {
+    color: rgb(75, 85, 99);
+    font-size: 0.875rem;
+}
+
+/* Testimonial Cards */
+.testimonial-card
